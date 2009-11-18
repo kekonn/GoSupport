@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module: be.jonas.gosupport
+OpenIDE-Module-Layer: be/jonas/gosupport/layer.xml
+OpenIDE-Module-Localizing-Bundle: be/jonas/gosupport/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+
