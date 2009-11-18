@@ -1,9 +1,41 @@
-grammar Go;
+lexer grammar Go;
 
+// keywords
+BREAK	:	'break';
+CASE	:	'case';
+CHAN	:	'chan';
+CONST	:	'const';
+CONTINUE:	'continue';
+DEFAULT	:	'default';
+DEFER	:	'defer';
+ELSE	:	'else';
+FALLTHROUGH
+	:	'fallthrough';
+FOR	:	'for';
+FUNC	:	'funct';
+GO	:	'go';
+GOTO	:	'goto';
+IF	:	'if';
+IMPORT	:	'import';
+INTERFACE
+	:	'interface';
+MAP	:	'map';
+PACKAGE	:	'package';
+RANGE	:	'range';
+RETURN	:	'return';
+SELECT	:	'select';
+STRUCT	:	'struct';
+SWITCH	:	'switch';
+TYPE	:	'type';
+VAR	:	'var';
+
+fragment
 UNICODE_LETTER	:	'a'..'z' | 'A'..'Z';
 
+fragment
 LETTER	:	UNICODE_LETTER | '_';
 
+fragment
 DIGIT	:	'0'..'9';
 
 ID  :	LETTER (LETTER | DIGIT)*;
@@ -34,12 +66,15 @@ UNICODE_ESC
     :   '\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
     ;
 
+fragment
 DECIMAL_LIT
 	:	'1'..'9' (DIGIT)*;
-	
+
+fragment
 OCTAL_LIT
 	:	'0' ('0'..'7')*;
 
+fragment
 HEX_LIT	:	'0' ('x' | 'X' ) HEX_DIGIT HEX_DIGIT*;
 
 INT_LIT	:	DECIMAL_LIT | OCTAL_LIT | HEX_LIT;
@@ -54,13 +89,16 @@ FLOAT_LIT
 ESCAPED_CHAR
 	:	
 	'\\' ('a' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' | '\\' | '\'' | '"');
-	
+
+fragment	
 BIG_U_VALUE
 	:	'\\' 'U' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT ;
-	
+
+fragment	
 LITTLE_U_VALUE
 	:	UNICODE_ESC;
-	
+
+fragment
 HEX_BYTE_VALUE
 	:	'\\' HEX_DIGIT HEX_DIGIT ;
 	
@@ -68,6 +106,7 @@ fragment
 OCTAL_DIGIT
 	:	('0'..'7');	
 
+fragment
 OCTAL_BYTE_VALUE
 	:	'\\' OCTAL_DIGIT OCTAL_DIGIT OCTAL_DIGIT ;
 	
@@ -85,6 +124,7 @@ INTERPRETED_STRING_LIT
 RAW_STRING_LIT
 	:	'`' UNICODE_LETTER* '`';
 	
+fragment
 STRINGLIT
 	:	RAW_STRING_LIT | INTERPRETED_STRING_LIT;
 	
@@ -102,35 +142,6 @@ WS  :   ( ' '
         | '\n'
         ) {$channel=HIDDEN;}
     ;
-
-// keywords
-BREAK	:	'break';
-CASE	:	'case';
-CHAN	:	'chan';
-CONST	:	'const';
-CONTINUE:	'continue';
-DEFAULT	:	'default';
-DEFER	:	'defer';
-ELSE	:	'else';
-FALLTHROUGH
-	:	'fallthrough';
-FOR	:	'for';
-FUNC	:	'funct';
-GO	:	'go';
-GOTO	:	'goto';
-IF	:	'if';
-IMPORT	:	'import';
-INTERFACE
-	:	'interface';
-MAP	:	'map';
-PACKAGE	:	'package';
-RANGE	:	'range';
-RETURN	:	'return';
-SELECT	:	'select';
-STRUCT	:	'struct';
-SWITCH	:	'switch';
-TYPE	:	'type';
-VAR	:	'var';
 
 PLUS	:	'+';
 MINUS	:	'-';
