@@ -1,7 +1,12 @@
-lexer grammar Go;
+lexer grammar GoLexer;
+@header {package be.jonas.gogrammar}
 
-// keywords
+
+// $<KEYWORD
+
 BREAK	:	'break';
+
+// $>
 CASE	:	'case';
 CHAN	:	'chan';
 CONST	:	'const';
@@ -196,7 +201,6 @@ SMTASSIGN
 LGTASSIGN
 	:	LGT ASSIGN;
 
-EOL	:	'\n' | ';';
 BRACEOPEN
 	:	'(';
 BRACECLOSE
@@ -210,6 +214,8 @@ RBRACEOPEN
 RBRACECLOSE
 	:	'}';
 SLICE	:	':';
+SELECTOR	:	'.';
 PARAMS	:	'...';
 COMMA	:	',';
-PERIOD	:	'.';
+SEPARATOR
+	:	';';
