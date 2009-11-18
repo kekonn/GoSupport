@@ -1,39 +1,12 @@
-grammar Go;
+lexer grammar Go;
 
-tokens {
-	BREAK='break';
-	CASE='case';
-	CHAN='chan';
-	CONST='const';
-	CONTINUE='continue';
-	DEFAULT='default';
-	DEFER='defer';
-	ELSE='else';
-	FALLTHROUGH='fallthrough';
-	FOR='for';
-	FUNC='func';
-	GO='go';
-	GOTO='goto';
-	IF='if';
-	IMPORT='import';
-	INTERFACE='interface';
-	MAP='map';
-	PACKAGE='package';
-	RANGE='range';
-	RETURN='return';
-	SELECT='select';
-	STRUCT='struct';
-	SWITCH='switch';
-	TYPE='type';
-	VAR='var';
-}
 
-digit	:	'0'..'9';
+    
+LETTER	:	'a'..'z' | 'A'..'Z' | '_';
 
-letter	:	'a'..'z'|'A'..'Z'|'_';
+DIGIT	:	'0'..'9';
 
-id	:	letter (letter | digit)*;
-
+ID  :	LETTER (LETTER | DIGIT)*;
 
 COMMENT
     :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
@@ -43,13 +16,13 @@ COMMENT
 WS  :   ( ' '
         | '\t'
         | '\r'
+        | '\n'
         ) {$channel=HIDDEN;}
     ;
 
 STRING
     :  '"' ( ESC_SEQ | ~('\\'|'"') )* '"'
     ;
-
 
 fragment
 HEX_DIGIT : ('0'..'9'|'a'..'f'|'A'..'F') ;
@@ -58,6 +31,14 @@ fragment
 ESC_SEQ
     :   '\\' ('b'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\')
     |   UNICODE_ESC
+    |   OCTAL_ESC
+    ;
+
+fragment
+OCTAL_ESC
+    :   '\\' ('0'..'3') ('0'..'7') ('0'..'7')
+    |   '\\' ('0'..'7') ('0'..'7')
+    |   '\\' ('0'..'7')
     ;
 
 fragment
