@@ -1,7 +1,39 @@
 grammar Go;
 
-ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
-    ;
+tokens {
+	BREAK='break';
+	CASE='case';
+	CHAN='chan';
+	CONST='const';
+	CONTINUE='continue';
+	DEFAULT='default';
+	DEFER='defer';
+	ELSE='else';
+	FALLTHROUGH='fallthrough';
+	FOR='for';
+	FUNC='func';
+	GO='go';
+	GOTO='goto';
+	IF='if';
+	IMPORT='import';
+	INTERFACE='interface';
+	MAP='map';
+	PACKAGE='package';
+	RANGE='range';
+	RETURN='return';
+	SELECT='select';
+	STRUCT='struct';
+	SWITCH='switch';
+	TYPE='type';
+	VAR='var';
+}
+
+digit	:	'0'..'9';
+
+letter	:	'a'..'z'|'A'..'Z'|'_';
+
+id	:	letter (letter | digit)*;
+
 
 COMMENT
     :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
@@ -18,8 +50,6 @@ STRING
     :  '"' ( ESC_SEQ | ~('\\'|'"') )* '"'
     ;
 
-CHAR:  '\'' ( ESC_SEQ | ~('\''|'\\') ) '\''
-    ;
 
 fragment
 HEX_DIGIT : ('0'..'9'|'a'..'f'|'A'..'F') ;
@@ -28,14 +58,6 @@ fragment
 ESC_SEQ
     :   '\\' ('b'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\')
     |   UNICODE_ESC
-    |   OCTAL_ESC
-    ;
-
-fragment
-OCTAL_ESC
-    :   '\\' ('0'..'3') ('0'..'7') ('0'..'7')
-    |   '\\' ('0'..'7') ('0'..'7')
-    |   '\\' ('0'..'7')
     ;
 
 fragment
