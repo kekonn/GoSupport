@@ -186,3 +186,19 @@ LGTASSIGN
 	:	LGT ASSIGN;
 
 EOL	:	'\n' | ';';
+BRACEOPEN
+	:	'(';
+BRACECLOSE
+	:	')';
+SQBRACEOPEN
+	:	'[';
+SQBRACECLOSE
+	:	']';
+RBRACEOPEN
+	:	'{';
+RBRACECLOSE
+	:	'}';
+SLICE	:	':';
+PARAMS	:	'...';
+COMMA	:	',';
+PERIOD	:	'.';
