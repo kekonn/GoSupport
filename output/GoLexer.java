@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/bloodsplatter/Projects/GoSupport/GoLexer.g 2009-11-18 22:11:44
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/bloodsplatter/Projects/GoSupport/GoLexer.g 2009-11-23 10:47:37
 package be.jonas.gogrammar
 
 import org.antlr.runtime.*;
@@ -11,8 +11,8 @@ public class GoLexer extends Lexer {
     public static final int EXPONENT=43;
     public static final int DECIMALS=42;
     public static final int INT_LIT=41;
-    public static final int LGT=78;
-    public static final int SQBRACECLOSE=98;
+    public static final int LGT=79;
+    public static final int SQBRACECLOSE=100;
     public static final int LETTER=30;
     public static final int CONST=7;
     public static final int BSHIFTL=68;
@@ -20,9 +20,10 @@ public class GoLexer extends Lexer {
     public static final int CASE=5;
     public static final int BSHIFTR=69;
     public static final int CHAN=6;
-    public static final int SEPARATOR=105;
+    public static final int SEPARATOR=106;
+    public static final int NOT=78;
     public static final int EOF=-1;
-    public static final int BORASSIGN=88;
+    public static final int BORASSIGN=90;
     public static final int DECIMAL_LIT=38;
     public static final int BREAK=4;
     public static final int OCTAL_DIGIT=49;
@@ -34,20 +35,20 @@ public class GoLexer extends Lexer {
     public static final int FLOAT_LIT=44;
     public static final int RETURN=23;
     public static final int CHANOP=73;
+    public static final int SMTOREQUAL=95;
     public static final int VAR=28;
-    public static final int LGTASSIGN=94;
     public static final int UNICODE_LETTER=29;
     public static final int GOTO=16;
     public static final int COMMENT=58;
-    public static final int PLUSASSIGN=82;
+    public static final int PLUSASSIGN=84;
     public static final int SELECT=24;
     public static final int DIVIDE=63;
-    public static final int ASSIGNINIT=81;
+    public static final int ASSIGNINIT=83;
     public static final int SWITCH=26;
     public static final int ELSE=11;
     public static final int CHAR_LIT=53;
-    public static final int MULTIPLYASSIGN=84;
-    public static final int BRACEOPEN=95;
+    public static final int MULTIPLYASSIGN=86;
+    public static final int BRACEOPEN=97;
     public static final int WS=59;
     public static final int OCTAL_LIT=39;
     public static final int FUNC=14;
@@ -57,36 +58,36 @@ public class GoLexer extends Lexer {
     public static final int HEX_LIT=40;
     public static final int HEX_BYTE_VALUE=48;
     public static final int STRING_LIT=57;
-    public static final int BANDNOTASSIGN=92;
-    public static final int BSHIFTRASSIGN=91;
+    public static final int BANDNOTASSIGN=94;
+    public static final int BSHIFTRASSIGN=93;
     public static final int FOR=13;
-    public static final int SLICE=101;
+    public static final int SLICE=82;
     public static final int ID=32;
     public static final int AND=71;
     public static final int ESCAPED_CHAR=45;
     public static final int FALLTHROUGH=12;
     public static final int IF=17;
-    public static final int RBRACEOPEN=99;
-    public static final int SELECTOR=102;
+    public static final int RBRACEOPEN=101;
+    public static final int SELECTOR=103;
     public static final int ESC_SEQ=33;
     public static final int CONTINUE=8;
     public static final int MULTIPLY=62;
-    public static final int COMMA=104;
-    public static final int BXORASSIGN=89;
+    public static final int COMMA=105;
+    public static final int BXORASSIGN=91;
     public static final int BOR=66;
     public static final int EQUAL=76;
     public static final int UNICODE_VALUE=52;
     public static final int PLUS=60;
     public static final int BXOR=67;
     public static final int DIGIT=31;
-    public static final int BRACECLOSE=96;
+    public static final int BRACECLOSE=98;
     public static final int BYTE_VALUE=51;
     public static final int STRINGLIT=56;
-    public static final int SMT=79;
-    public static final int PARAMS=103;
+    public static final int SMT=80;
+    public static final int PARAMS=104;
     public static final int DEFER=10;
-    public static final int SQBRACEOPEN=97;
-    public static final int MODASSIGN=86;
+    public static final int SQBRACEOPEN=99;
+    public static final int MODASSIGN=88;
     public static final int BANDNOT=70;
     public static final int UNICODE_ESC=36;
     public static final int DEFAULT=9;
@@ -94,21 +95,21 @@ public class GoLexer extends Lexer {
     public static final int HEX_DIGIT=35;
     public static final int RANGE=22;
     public static final int STRUCT=25;
-    public static final int BSHIFTLASSIGN=90;
+    public static final int BSHIFTLASSIGN=92;
     public static final int MINUS=61;
-    public static final int MINUSASSIGN=83;
+    public static final int MINUSASSIGN=85;
     public static final int BIG_U_VALUE=46;
     public static final int OCTAL_BYTE_VALUE=50;
-    public static final int DIVIDEASSIGN=85;
-    public static final int RBRACECLOSE=100;
+    public static final int DIVIDEASSIGN=87;
+    public static final int RBRACECLOSE=102;
     public static final int MODULUS=64;
     public static final int MAP=20;
-    public static final int SMTASSIGN=93;
-    public static final int ASSIGN=80;
+    public static final int ASSIGN=81;
     public static final int DECR=75;
     public static final int INTERFACE=19;
+    public static final int LGTOREQUAL=96;
     public static final int INTERPRETED_STRING_LIT=54;
-    public static final int BANDASSIGN=87;
+    public static final int BANDASSIGN=89;
     public static final int STRING=34;
 
     // delegates
@@ -959,9 +960,9 @@ public class GoLexer extends Lexer {
                     int LA4_2 = input.LA(3);
 
                     if ( ((LA4_2>='0' && LA4_2<='7')) ) {
-                        int LA4_4 = input.LA(4);
+                        int LA4_5 = input.LA(4);
 
-                        if ( ((LA4_4>='0' && LA4_4<='7')) ) {
+                        if ( ((LA4_5>='0' && LA4_5<='7')) ) {
                             alt4=1;
                         }
                         else {
@@ -2578,13 +2579,33 @@ public class GoLexer extends Lexer {
     }
     // $ANTLR end "NOTEQUAL"
 
+    // $ANTLR start "NOT"
+    public final void mNOT() throws RecognitionException {
+        try {
+            int _type = NOT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:169:5: ( '!' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:169:7: '!'
+            {
+            match('!'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "NOT"
+
     // $ANTLR start "LGT"
     public final void mLGT() throws RecognitionException {
         try {
             int _type = LGT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:169:5: ( '>' )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:169:7: '>'
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:170:5: ( '>' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:170:7: '>'
             {
             match('>'); 
 
@@ -2603,8 +2624,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = SMT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:170:5: ( '<' )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:170:7: '<'
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:171:5: ( '<' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:171:7: '<'
             {
             match('<'); 
 
@@ -2623,8 +2644,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:173:8: ( '=' )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:173:10: '='
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:174:8: ( '=' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:174:10: '='
             {
             match('='); 
 
@@ -2643,10 +2664,10 @@ public class GoLexer extends Lexer {
         try {
             int _type = ASSIGNINIT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:175:2: ( ':' ASSIGN )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:175:4: ':' ASSIGN
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:176:2: ( SLICE ASSIGN )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:176:4: SLICE ASSIGN
             {
-            match(':'); 
+            mSLICE(); 
             mASSIGN(); 
 
             }
@@ -2664,8 +2685,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = PLUSASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:178:2: ( PLUS ASSIGN )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:178:4: PLUS ASSIGN
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:179:2: ( PLUS ASSIGN )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:179:4: PLUS ASSIGN
             {
             mPLUS(); 
             mASSIGN(); 
@@ -2685,8 +2706,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = MINUSASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:180:2: ( MINUS ASSIGN )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:180:4: MINUS ASSIGN
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:181:2: ( MINUS ASSIGN )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:181:4: MINUS ASSIGN
             {
             mMINUS(); 
             mASSIGN(); 
@@ -2706,8 +2727,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = MULTIPLYASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:182:2: ( MULTIPLY ASSIGN )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:182:4: MULTIPLY ASSIGN
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:183:2: ( MULTIPLY ASSIGN )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:183:4: MULTIPLY ASSIGN
             {
             mMULTIPLY(); 
             mASSIGN(); 
@@ -2727,8 +2748,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = DIVIDEASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:184:2: ( DIVIDE ASSIGN )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:184:4: DIVIDE ASSIGN
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:185:2: ( DIVIDE ASSIGN )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:185:4: DIVIDE ASSIGN
             {
             mDIVIDE(); 
             mASSIGN(); 
@@ -2748,8 +2769,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = MODASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:186:2: ( MODULUS ASSIGN )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:186:4: MODULUS ASSIGN
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:187:2: ( MODULUS ASSIGN )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:187:4: MODULUS ASSIGN
             {
             mMODULUS(); 
             mASSIGN(); 
@@ -2769,8 +2790,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = BANDASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:188:2: ( AMPERSAND ASSIGN )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:188:4: AMPERSAND ASSIGN
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:189:2: ( AMPERSAND ASSIGN )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:189:4: AMPERSAND ASSIGN
             {
             mAMPERSAND(); 
             mASSIGN(); 
@@ -2790,8 +2811,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = BORASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:190:2: ( BOR ASSIGN )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:190:4: BOR ASSIGN
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:191:2: ( BOR ASSIGN )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:191:4: BOR ASSIGN
             {
             mBOR(); 
             mASSIGN(); 
@@ -2811,8 +2832,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = BXORASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:192:2: ( BXOR ASSIGN )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:192:4: BXOR ASSIGN
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:193:2: ( BXOR ASSIGN )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:193:4: BXOR ASSIGN
             {
             mBXOR(); 
             mASSIGN(); 
@@ -2832,8 +2853,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = BSHIFTLASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:194:2: ( BSHIFTL ASSIGN )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:194:4: BSHIFTL ASSIGN
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:195:2: ( BSHIFTL ASSIGN )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:195:4: BSHIFTL ASSIGN
             {
             mBSHIFTL(); 
             mASSIGN(); 
@@ -2853,8 +2874,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = BSHIFTRASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:196:2: ( BSHIFTR ASSIGN )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:196:4: BSHIFTR ASSIGN
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:197:2: ( BSHIFTR ASSIGN )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:197:4: BSHIFTR ASSIGN
             {
             mBSHIFTR(); 
             mASSIGN(); 
@@ -2874,8 +2895,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = BANDNOTASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:198:2: ( BANDNOT ASSIGN )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:198:4: BANDNOT ASSIGN
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:199:2: ( BANDNOT ASSIGN )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:199:4: BANDNOT ASSIGN
             {
             mBANDNOT(); 
             mASSIGN(); 
@@ -2890,13 +2911,13 @@ public class GoLexer extends Lexer {
     }
     // $ANTLR end "BANDNOTASSIGN"
 
-    // $ANTLR start "SMTASSIGN"
-    public final void mSMTASSIGN() throws RecognitionException {
+    // $ANTLR start "SMTOREQUAL"
+    public final void mSMTOREQUAL() throws RecognitionException {
         try {
-            int _type = SMTASSIGN;
+            int _type = SMTOREQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:200:2: ( SMT ASSIGN )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:200:4: SMT ASSIGN
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:201:2: ( SMT ASSIGN )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:201:4: SMT ASSIGN
             {
             mSMT(); 
             mASSIGN(); 
@@ -2909,15 +2930,15 @@ public class GoLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "SMTASSIGN"
+    // $ANTLR end "SMTOREQUAL"
 
-    // $ANTLR start "LGTASSIGN"
-    public final void mLGTASSIGN() throws RecognitionException {
+    // $ANTLR start "LGTOREQUAL"
+    public final void mLGTOREQUAL() throws RecognitionException {
         try {
-            int _type = LGTASSIGN;
+            int _type = LGTOREQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:202:2: ( LGT ASSIGN )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:202:4: LGT ASSIGN
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:203:2: ( LGT ASSIGN )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:203:4: LGT ASSIGN
             {
             mLGT(); 
             mASSIGN(); 
@@ -2930,15 +2951,15 @@ public class GoLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "LGTASSIGN"
+    // $ANTLR end "LGTOREQUAL"
 
     // $ANTLR start "BRACEOPEN"
     public final void mBRACEOPEN() throws RecognitionException {
         try {
             int _type = BRACEOPEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:205:2: ( '(' )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:205:4: '('
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:206:2: ( '(' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:206:4: '('
             {
             match('('); 
 
@@ -2957,8 +2978,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = BRACECLOSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:207:2: ( ')' )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:207:4: ')'
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:208:2: ( ')' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:208:4: ')'
             {
             match(')'); 
 
@@ -2977,8 +2998,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = SQBRACEOPEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:209:2: ( '[' )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:209:4: '['
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:210:2: ( '[' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:210:4: '['
             {
             match('['); 
 
@@ -2997,8 +3018,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = SQBRACECLOSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:211:2: ( ']' )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:211:4: ']'
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:212:2: ( ']' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:212:4: ']'
             {
             match(']'); 
 
@@ -3017,8 +3038,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = RBRACEOPEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:213:2: ( '{' )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:213:4: '{'
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:214:2: ( '{' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:214:4: '{'
             {
             match('{'); 
 
@@ -3037,8 +3058,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = RBRACECLOSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:215:2: ( '}' )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:215:4: '}'
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:216:2: ( '}' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:216:4: '}'
             {
             match('}'); 
 
@@ -3057,8 +3078,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = SLICE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:216:7: ( ':' )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:216:9: ':'
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:217:7: ( ':' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:217:9: ':'
             {
             match(':'); 
 
@@ -3077,8 +3098,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = SELECTOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:217:10: ( '.' )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:217:12: '.'
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:218:10: ( '.' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:218:12: '.'
             {
             match('.'); 
 
@@ -3097,8 +3118,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = PARAMS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:218:8: ( '...' )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:218:10: '...'
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:219:8: ( '...' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:219:10: '...'
             {
             match("..."); 
 
@@ -3118,8 +3139,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = COMMA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:219:7: ( ',' )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:219:9: ','
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:220:7: ( ',' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:220:9: ','
             {
             match(','); 
 
@@ -3138,8 +3159,8 @@ public class GoLexer extends Lexer {
         try {
             int _type = SEPARATOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:221:2: ( ';' )
-            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:221:4: ';'
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:222:2: ( ';' )
+            // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:222:4: ';'
             {
             match(';'); 
 
@@ -3154,8 +3175,8 @@ public class GoLexer extends Lexer {
     // $ANTLR end "SEPARATOR"
 
     public void mTokens() throws RecognitionException {
-        // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:8: ( BREAK | CASE | CHAN | CONST | CONTINUE | DEFAULT | DEFER | ELSE | FALLTHROUGH | FOR | FUNC | GO | GOTO | IF | IMPORT | INTERFACE | MAP | PACKAGE | RANGE | RETURN | SELECT | STRUCT | SWITCH | TYPE | VAR | ID | STRING | INT_LIT | DECIMALS | EXPONENT | FLOAT_LIT | ESCAPED_CHAR | BYTE_VALUE | UNICODE_VALUE | CHAR_LIT | INTERPRETED_STRING_LIT | RAW_STRING_LIT | STRING_LIT | COMMENT | WS | PLUS | MINUS | MULTIPLY | DIVIDE | MODULUS | AMPERSAND | BOR | BXOR | BSHIFTL | BSHIFTR | BANDNOT | AND | OR | CHANOP | INCR | DECR | EQUAL | NOTEQUAL | LGT | SMT | ASSIGN | ASSIGNINIT | PLUSASSIGN | MINUSASSIGN | MULTIPLYASSIGN | DIVIDEASSIGN | MODASSIGN | BANDASSIGN | BORASSIGN | BXORASSIGN | BSHIFTLASSIGN | BSHIFTRASSIGN | BANDNOTASSIGN | SMTASSIGN | LGTASSIGN | BRACEOPEN | BRACECLOSE | SQBRACEOPEN | SQBRACECLOSE | RBRACEOPEN | RBRACECLOSE | SLICE | SELECTOR | PARAMS | COMMA | SEPARATOR )
-        int alt26=86;
+        // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:8: ( BREAK | CASE | CHAN | CONST | CONTINUE | DEFAULT | DEFER | ELSE | FALLTHROUGH | FOR | FUNC | GO | GOTO | IF | IMPORT | INTERFACE | MAP | PACKAGE | RANGE | RETURN | SELECT | STRUCT | SWITCH | TYPE | VAR | ID | STRING | INT_LIT | DECIMALS | EXPONENT | FLOAT_LIT | ESCAPED_CHAR | BYTE_VALUE | UNICODE_VALUE | CHAR_LIT | INTERPRETED_STRING_LIT | RAW_STRING_LIT | STRING_LIT | COMMENT | WS | PLUS | MINUS | MULTIPLY | DIVIDE | MODULUS | AMPERSAND | BOR | BXOR | BSHIFTL | BSHIFTR | BANDNOT | AND | OR | CHANOP | INCR | DECR | EQUAL | NOTEQUAL | NOT | LGT | SMT | ASSIGN | ASSIGNINIT | PLUSASSIGN | MINUSASSIGN | MULTIPLYASSIGN | DIVIDEASSIGN | MODASSIGN | BANDASSIGN | BORASSIGN | BXORASSIGN | BSHIFTLASSIGN | BSHIFTRASSIGN | BANDNOTASSIGN | SMTOREQUAL | LGTOREQUAL | BRACEOPEN | BRACECLOSE | SQBRACEOPEN | SQBRACECLOSE | RBRACEOPEN | RBRACECLOSE | SLICE | SELECTOR | PARAMS | COMMA | SEPARATOR )
+        int alt26=87;
         alt26 = dfa26.predict(input);
         switch (alt26) {
             case 1 :
@@ -3565,196 +3586,203 @@ public class GoLexer extends Lexer {
                 }
                 break;
             case 59 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:434: LGT
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:434: NOT
+                {
+                mNOT(); 
+
+                }
+                break;
+            case 60 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:438: LGT
                 {
                 mLGT(); 
 
                 }
                 break;
-            case 60 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:438: SMT
+            case 61 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:442: SMT
                 {
                 mSMT(); 
 
                 }
                 break;
-            case 61 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:442: ASSIGN
+            case 62 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:446: ASSIGN
                 {
                 mASSIGN(); 
 
                 }
                 break;
-            case 62 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:449: ASSIGNINIT
+            case 63 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:453: ASSIGNINIT
                 {
                 mASSIGNINIT(); 
 
                 }
                 break;
-            case 63 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:460: PLUSASSIGN
+            case 64 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:464: PLUSASSIGN
                 {
                 mPLUSASSIGN(); 
 
                 }
                 break;
-            case 64 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:471: MINUSASSIGN
+            case 65 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:475: MINUSASSIGN
                 {
                 mMINUSASSIGN(); 
 
                 }
                 break;
-            case 65 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:483: MULTIPLYASSIGN
+            case 66 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:487: MULTIPLYASSIGN
                 {
                 mMULTIPLYASSIGN(); 
 
                 }
                 break;
-            case 66 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:498: DIVIDEASSIGN
+            case 67 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:502: DIVIDEASSIGN
                 {
                 mDIVIDEASSIGN(); 
 
                 }
                 break;
-            case 67 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:511: MODASSIGN
+            case 68 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:515: MODASSIGN
                 {
                 mMODASSIGN(); 
 
                 }
                 break;
-            case 68 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:521: BANDASSIGN
+            case 69 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:525: BANDASSIGN
                 {
                 mBANDASSIGN(); 
 
                 }
                 break;
-            case 69 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:532: BORASSIGN
+            case 70 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:536: BORASSIGN
                 {
                 mBORASSIGN(); 
 
                 }
                 break;
-            case 70 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:542: BXORASSIGN
+            case 71 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:546: BXORASSIGN
                 {
                 mBXORASSIGN(); 
 
                 }
                 break;
-            case 71 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:553: BSHIFTLASSIGN
+            case 72 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:557: BSHIFTLASSIGN
                 {
                 mBSHIFTLASSIGN(); 
 
                 }
                 break;
-            case 72 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:567: BSHIFTRASSIGN
+            case 73 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:571: BSHIFTRASSIGN
                 {
                 mBSHIFTRASSIGN(); 
 
                 }
                 break;
-            case 73 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:581: BANDNOTASSIGN
+            case 74 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:585: BANDNOTASSIGN
                 {
                 mBANDNOTASSIGN(); 
 
                 }
                 break;
-            case 74 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:595: SMTASSIGN
-                {
-                mSMTASSIGN(); 
-
-                }
-                break;
             case 75 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:605: LGTASSIGN
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:599: SMTOREQUAL
                 {
-                mLGTASSIGN(); 
+                mSMTOREQUAL(); 
 
                 }
                 break;
             case 76 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:615: BRACEOPEN
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:610: LGTOREQUAL
+                {
+                mLGTOREQUAL(); 
+
+                }
+                break;
+            case 77 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:621: BRACEOPEN
                 {
                 mBRACEOPEN(); 
 
                 }
                 break;
-            case 77 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:625: BRACECLOSE
+            case 78 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:631: BRACECLOSE
                 {
                 mBRACECLOSE(); 
 
                 }
                 break;
-            case 78 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:636: SQBRACEOPEN
+            case 79 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:642: SQBRACEOPEN
                 {
                 mSQBRACEOPEN(); 
 
                 }
                 break;
-            case 79 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:648: SQBRACECLOSE
+            case 80 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:654: SQBRACECLOSE
                 {
                 mSQBRACECLOSE(); 
 
                 }
                 break;
-            case 80 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:661: RBRACEOPEN
+            case 81 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:667: RBRACEOPEN
                 {
                 mRBRACEOPEN(); 
 
                 }
                 break;
-            case 81 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:672: RBRACECLOSE
+            case 82 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:678: RBRACECLOSE
                 {
                 mRBRACECLOSE(); 
 
                 }
                 break;
-            case 82 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:684: SLICE
+            case 83 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:690: SLICE
                 {
                 mSLICE(); 
 
                 }
                 break;
-            case 83 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:690: SELECTOR
+            case 84 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:696: SELECTOR
                 {
                 mSELECTOR(); 
 
                 }
                 break;
-            case 84 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:699: PARAMS
+            case 85 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:705: PARAMS
                 {
                 mPARAMS(); 
 
                 }
                 break;
-            case 85 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:706: COMMA
+            case 86 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:712: COMMA
                 {
                 mCOMMA(); 
 
                 }
                 break;
-            case 86 :
-                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:712: SEPARATOR
+            case 87 :
+                // /Users/bloodsplatter/Projects/GoSupport/GoLexer.g:1:718: SEPARATOR
                 {
                 mSEPARATOR(); 
 
@@ -3777,14 +3805,14 @@ public class GoLexer extends Lexer {
     static final String DFA14_maxS =
         "\1\71\1\145\1\uffff\1\145\2\uffff";
     static final String DFA14_acceptS =
-        "\2\uffff\1\3\1\uffff\1\1\1\2";
+        "\2\uffff\1\3\1\uffff\1\2\1\1";
     static final String DFA14_specialS =
         "\6\uffff}>";
     static final String[] DFA14_transitionS = {
             "\1\2\1\uffff\12\1",
-            "\1\4\1\uffff\12\3\13\uffff\1\5\37\uffff\1\5",
+            "\1\5\1\uffff\12\3\13\uffff\1\4\37\uffff\1\4",
             "",
-            "\1\4\1\uffff\12\3\13\uffff\1\5\37\uffff\1\5",
+            "\1\5\1\uffff\12\3\13\uffff\1\4\37\uffff\1\4",
             "",
             ""
     };
@@ -3824,75 +3852,76 @@ public class GoLexer extends Lexer {
     }
     static final String DFA26_eotS =
         "\1\uffff\16\25\1\uffff\2\112\1\uffff\1\120\4\uffff\1\130\1\uffff"+
-        "\1\133\1\136\1\140\1\142\1\145\1\151\1\153\1\157\1\162\1\165\1\uffff"+
-        "\1\166\10\uffff\6\25\1\uffff\4\25\1\u0083\1\u0084\13\25\2\uffff"+
-        "\1\111\2\uffff\1\112\1\uffff\1\112\1\u0097\2\uffff\1\123\4\uffff"+
-        "\1\u0098\17\uffff\1\u0099\6\uffff\1\u009b\3\uffff\1\u009d\6\uffff"+
-        "\10\25\1\u00a8\2\25\2\uffff\2\25\1\u00ad\7\25\1\u00b5\17\uffff\1"+
-        "\25\1\u00bd\1\u00be\4\25\1\u00c3\1\25\1\uffff\1\25\1\u00c6\2\25"+
-        "\1\uffff\6\25\1\u00cf\7\uffff\1\u00d7\2\uffff\1\u00d8\2\25\1\u00db"+
-        "\1\uffff\1\25\1\u00dd\1\uffff\3\25\1\u00e1\4\25\5\uffff\1\u00e8"+
-        "\4\uffff\2\25\1\uffff\1\25\1\uffff\1\u00ee\2\25\1\uffff\1\u00f1"+
-        "\1\u00f2\1\u00f3\1\u00f4\5\uffff\1\25\1\u00fa\1\25\1\uffff\1\25"+
-        "\1\u00fd\10\uffff\1\u0101\1\uffff\2\25\5\uffff\1\25\1\u0107\2\uffff"+
-        "\1\25\3\uffff\1\u010c\2\uffff";
+        "\1\133\1\136\1\140\1\142\1\145\1\151\1\153\1\157\1\162\1\165\1\167"+
+        "\1\170\10\uffff\7\25\1\uffff\3\25\1\u0085\1\u0086\13\25\2\uffff"+
+        "\1\111\2\uffff\1\112\1\uffff\1\112\1\u0099\2\uffff\1\124\4\uffff"+
+        "\1\u009a\17\uffff\1\u009b\6\uffff\1\u009d\3\uffff\1\u009f\10\uffff"+
+        "\10\25\1\u00aa\2\25\2\uffff\2\25\1\u00af\7\25\1\u00b7\17\uffff\1"+
+        "\25\1\u00bf\1\u00c0\4\25\1\u00c5\1\25\1\uffff\1\25\1\u00c8\2\25"+
+        "\1\uffff\6\25\1\u00d1\7\uffff\1\u00d9\2\uffff\1\u00da\2\25\1\u00dd"+
+        "\1\uffff\1\25\1\u00df\1\uffff\3\25\1\u00e3\4\25\4\uffff\1\u00ea"+
+        "\5\uffff\2\25\1\uffff\1\25\1\uffff\1\u00f0\2\25\1\uffff\1\u00f3"+
+        "\1\u00f4\1\u00f5\1\u00f6\5\uffff\1\25\1\u00fc\1\25\1\uffff\1\25"+
+        "\1\u00ff\10\uffff\1\u0103\1\uffff\2\25\5\uffff\1\25\1\u0109\2\uffff"+
+        "\1\25\3\uffff\1\u010e\2\uffff";
     static final String DFA26_eofS =
-        "\u010d\uffff";
+        "\u010f\uffff";
     static final String DFA26_minS =
         "\1\11\1\162\1\141\1\145\1\53\1\141\1\157\1\146\3\141\1\145\1\171"+
         "\1\141\1\53\1\0\2\56\1\uffff\1\56\1\42\2\uffff\1\101\1\52\1\uffff"+
-        "\1\53\1\55\2\75\1\46\2\75\1\55\2\75\1\uffff\1\75\10\uffff\1\145"+
-        "\1\163\1\141\1\156\1\146\1\163\1\uffff\1\60\1\154\1\162\1\156\2"+
-        "\60\1\160\1\164\1\160\1\143\1\156\1\164\1\154\1\162\1\151\1\160"+
-        "\1\162\1\0\2\42\2\uffff\1\56\1\uffff\2\56\2\uffff\1\60\3\uffff\1"+
-        "\101\1\42\17\uffff\1\75\6\uffff\1\75\3\uffff\1\75\6\uffff\1\141"+
-        "\1\145\1\156\1\163\1\141\1\145\1\60\1\154\1\60\1\143\1\157\2\uffff"+
-        "\1\157\1\145\1\60\1\153\1\147\1\165\1\145\1\165\1\164\1\145\3\60"+
-        "\3\0\1\60\11\uffff\1\153\2\60\1\164\1\151\1\165\1\162\1\60\1\164"+
-        "\1\uffff\1\164\1\60\2\162\1\uffff\1\141\1\145\1\162\3\143\1\60\1"+
-        "\uffff\2\60\3\0\1\42\1\60\2\uffff\1\60\1\156\1\154\1\60\1\uffff"+
-        "\1\150\1\60\1\uffff\1\164\1\146\1\147\1\60\1\156\2\164\1\150\1\uffff"+
-        "\2\60\2\0\2\42\1\60\2\uffff\1\165\1\164\1\uffff\1\162\1\uffff\1"+
-        "\60\1\141\1\145\1\uffff\6\60\1\uffff\2\60\1\145\1\60\1\157\1\uffff"+
-        "\1\143\1\60\4\uffff\1\0\2\60\1\42\1\60\1\uffff\1\165\1\145\1\uffff"+
-        "\2\60\1\42\1\uffff\1\147\3\60\1\150\1\uffff\1\60\1\42\1\60\1\42"+
-        "\1\uffff";
+        "\1\53\1\55\2\75\1\46\2\75\1\55\4\75\10\uffff\1\145\1\163\1\141\1"+
+        "\156\1\146\1\163\1\60\1\uffff\1\154\1\162\1\156\2\60\1\160\1\164"+
+        "\1\160\1\143\1\156\1\164\1\154\1\162\1\151\1\160\1\162\1\42\1\0"+
+        "\1\42\2\uffff\1\56\1\uffff\2\56\2\uffff\1\60\3\uffff\1\101\1\42"+
+        "\17\uffff\1\75\6\uffff\1\75\3\uffff\1\75\10\uffff\1\141\1\145\1"+
+        "\156\1\163\1\141\1\145\1\60\1\154\1\60\1\143\1\157\2\uffff\1\157"+
+        "\1\145\1\60\1\153\1\147\1\165\1\145\1\165\1\164\1\145\1\60\1\0\2"+
+        "\60\1\0\1\60\1\0\11\uffff\1\153\2\60\1\164\1\151\1\165\1\162\1\60"+
+        "\1\164\1\uffff\1\164\1\60\2\162\1\uffff\1\141\1\145\1\162\3\143"+
+        "\1\60\1\uffff\1\0\2\60\1\0\1\42\1\0\1\60\2\uffff\1\60\1\156\1\154"+
+        "\1\60\1\uffff\1\150\1\60\1\uffff\1\164\1\146\1\147\1\60\1\156\2"+
+        "\164\1\150\1\uffff\2\60\1\0\2\42\1\60\1\0\2\uffff\1\165\1\164\1"+
+        "\uffff\1\162\1\uffff\1\60\1\141\1\145\1\uffff\6\60\1\uffff\2\60"+
+        "\1\145\1\60\1\157\1\uffff\1\143\1\60\4\uffff\1\0\2\60\1\42\1\60"+
+        "\1\uffff\1\165\1\145\1\uffff\2\60\1\42\1\uffff\1\147\3\60\1\150"+
+        "\1\uffff\1\60\1\42\1\60\1\42\1\uffff";
     static final String DFA26_maxS =
         "\1\175\1\162\1\157\1\145\1\154\1\165\1\157\1\156\2\141\1\145\1\167"+
         "\1\171\1\141\1\71\1\uffff\2\145\1\uffff\1\71\1\166\2\uffff\1\172"+
-        "\1\75\1\uffff\4\75\1\136\1\174\2\75\1\76\1\75\1\uffff\1\75\10\uffff"+
-        "\1\145\1\163\1\141\1\156\1\146\1\163\1\uffff\1\71\1\154\1\162\1"+
-        "\156\2\172\1\160\1\164\1\160\1\143\1\156\1\164\1\154\1\162\1\151"+
-        "\1\160\1\162\1\uffff\1\165\1\140\2\uffff\1\145\1\uffff\2\145\2\uffff"+
-        "\1\146\3\uffff\1\172\1\140\17\uffff\1\75\6\uffff\1\75\3\uffff\1"+
-        "\75\6\uffff\1\141\1\145\1\156\1\164\2\145\1\71\1\154\1\172\1\143"+
-        "\1\157\2\uffff\1\157\1\145\1\172\1\153\1\147\1\165\1\145\1\165\1"+
-        "\164\1\145\1\172\2\146\3\uffff\1\146\11\uffff\1\153\2\172\1\164"+
+        "\1\75\1\uffff\4\75\1\136\1\174\2\75\1\76\3\75\10\uffff\1\145\1\163"+
+        "\1\141\1\156\1\146\1\163\1\71\1\uffff\1\154\1\162\1\156\2\172\1"+
+        "\160\1\164\1\160\1\143\1\156\1\164\1\154\1\162\1\151\1\160\1\162"+
+        "\1\165\1\uffff\1\140\2\uffff\1\145\1\uffff\2\145\2\uffff\1\146\3"+
+        "\uffff\1\172\1\140\17\uffff\1\75\6\uffff\1\75\3\uffff\1\75\10\uffff"+
+        "\1\141\1\145\1\156\1\164\2\145\1\71\1\154\1\172\1\143\1\157\2\uffff"+
+        "\1\157\1\145\1\172\1\153\1\147\1\165\1\145\1\165\1\164\1\145\1\172"+
+        "\1\uffff\2\146\1\uffff\1\146\1\uffff\11\uffff\1\153\2\172\1\164"+
         "\1\151\1\165\1\162\1\172\1\164\1\uffff\1\164\1\172\2\162\1\uffff"+
-        "\1\141\1\145\1\162\3\143\1\172\1\uffff\2\146\3\uffff\2\172\2\uffff"+
-        "\1\172\1\156\1\154\1\172\1\uffff\1\150\1\172\1\uffff\1\164\1\146"+
-        "\1\147\1\172\1\156\2\164\1\150\1\uffff\2\146\2\uffff\1\140\1\172"+
-        "\1\165\2\uffff\1\165\1\164\1\uffff\1\162\1\uffff\1\172\1\141\1\145"+
-        "\1\uffff\4\172\2\146\1\uffff\2\146\1\145\1\172\1\157\1\uffff\1\143"+
-        "\1\172\4\uffff\1\uffff\2\146\2\172\1\uffff\1\165\1\145\1\uffff\2"+
-        "\146\1\172\1\uffff\1\147\1\172\2\146\1\150\1\uffff\1\146\3\172\1"+
-        "\uffff";
+        "\1\141\1\145\1\162\3\143\1\172\1\uffff\1\uffff\2\146\1\uffff\1\172"+
+        "\1\uffff\1\172\2\uffff\1\172\1\156\1\154\1\172\1\uffff\1\150\1\172"+
+        "\1\uffff\1\164\1\146\1\147\1\172\1\156\2\164\1\150\1\uffff\2\146"+
+        "\1\uffff\1\140\1\172\1\165\1\uffff\2\uffff\1\165\1\164\1\uffff\1"+
+        "\162\1\uffff\1\172\1\141\1\145\1\uffff\4\172\2\146\1\uffff\2\146"+
+        "\1\145\1\172\1\157\1\uffff\1\143\1\172\4\uffff\1\uffff\2\146\2\172"+
+        "\1\uffff\1\165\1\145\1\uffff\2\146\1\172\1\uffff\1\147\1\172\2\146"+
+        "\1\150\1\uffff\1\146\3\172\1\uffff";
     static final String DFA26_acceptS =
-        "\22\uffff\1\32\2\uffff\1\32\1\43\2\uffff\1\50\12\uffff\1\72\1\uffff"+
-        "\1\114\1\115\1\116\1\117\1\120\1\121\1\125\1\126\6\uffff\1\36\24"+
-        "\uffff\1\33\1\34\1\uffff\1\37\2\uffff\1\124\1\123\1\uffff\1\42\1"+
-        "\40\1\41\2\uffff\1\47\1\54\1\102\1\67\1\51\1\77\1\70\1\52\1\100"+
-        "\1\53\1\101\1\55\1\103\1\64\1\56\1\uffff\1\104\1\65\1\57\1\105\1"+
-        "\60\1\106\1\uffff\1\66\1\74\1\112\1\uffff\1\73\1\113\1\71\1\75\1"+
-        "\122\1\76\13\uffff\1\14\1\16\21\uffff\1\46\1\35\1\45\1\63\1\111"+
-        "\1\61\1\107\1\62\1\110\11\uffff\1\12\4\uffff\1\21\7\uffff\1\31\7"+
+        "\22\uffff\1\32\2\uffff\1\32\1\43\2\uffff\1\50\14\uffff\1\115\1\116"+
+        "\1\117\1\120\1\121\1\122\1\126\1\127\7\uffff\1\36\23\uffff\1\33"+
+        "\1\34\1\uffff\1\37\2\uffff\1\125\1\124\1\uffff\1\42\1\41\1\40\2"+
+        "\uffff\1\47\1\54\1\103\1\67\1\51\1\100\1\70\1\52\1\101\1\53\1\102"+
+        "\1\55\1\104\1\64\1\56\1\uffff\1\105\1\65\1\57\1\106\1\60\1\107\1"+
+        "\uffff\1\66\1\75\1\113\1\uffff\1\74\1\114\1\71\1\76\1\72\1\73\1"+
+        "\123\1\77\13\uffff\1\14\1\16\21\uffff\1\46\1\35\1\45\1\63\1\112"+
+        "\1\61\1\110\1\62\1\111\11\uffff\1\12\4\uffff\1\21\7\uffff\1\31\7"+
         "\uffff\1\2\1\3\4\uffff\1\10\2\uffff\1\15\10\uffff\1\30\7\uffff\1"+
         "\1\1\4\2\uffff\1\7\1\uffff\1\13\3\uffff\1\23\6\uffff\1\44\5\uffff"+
         "\1\17\2\uffff\1\24\1\25\1\26\1\27\5\uffff\1\6\2\uffff\1\22\3\uffff"+
         "\1\5\5\uffff\1\20\4\uffff\1\11";
     static final String DFA26_specialS =
-        "\17\uffff\1\0\66\uffff\1\10\113\uffff\1\12\1\2\1\6\43\uffff\1\3"+
-        "\1\7\1\5\27\uffff\1\11\1\4\41\uffff\1\1\27\uffff}>";
+        "\17\uffff\1\5\67\uffff\1\10\112\uffff\1\11\2\uffff\1\2\1\uffff\1"+
+        "\4\40\uffff\1\12\2\uffff\1\1\1\uffff\1\7\26\uffff\1\3\3\uffff\1"+
+        "\0\36\uffff\1\6\27\uffff}>";
     static final String[] DFA26_transitionS = {
             "\2\31\2\uffff\1\31\22\uffff\1\31\1\44\1\17\2\uffff\1\35\1\36"+
             "\1\26\1\46\1\47\1\34\1\32\1\54\1\33\1\23\1\30\1\21\11\20\1\45"+
@@ -3903,7 +3932,7 @@ public class GoLexer extends Lexer {
             "\1\56",
             "\1\57\6\uffff\1\60\6\uffff\1\61",
             "\1\62",
-            "\1\64\1\uffff\1\64\2\uffff\12\65\62\uffff\1\63",
+            "\1\65\1\uffff\1\65\2\uffff\12\64\62\uffff\1\63",
             "\1\66\15\uffff\1\67\5\uffff\1\70",
             "\1\71",
             "\1\72\6\uffff\1\73\1\74",
@@ -3913,16 +3942,16 @@ public class GoLexer extends Lexer {
             "\1\101\16\uffff\1\102\2\uffff\1\103",
             "\1\104",
             "\1\105",
-            "\1\64\1\uffff\1\64\2\uffff\12\65",
-            "\42\111\1\110\36\111\32\106\1\111\1\107\4\111\32\106\uff85"+
+            "\1\65\1\uffff\1\65\2\uffff\12\64",
+            "\42\111\1\110\36\111\32\107\1\111\1\106\4\111\32\107\uff85"+
             "\111",
             "\1\114\1\uffff\12\113\13\uffff\1\114\37\uffff\1\114",
             "\1\114\1\uffff\10\115\2\116\13\uffff\1\114\37\uffff\1\114",
             "",
             "\1\117\1\uffff\12\114",
-            "\1\123\4\uffff\1\123\10\uffff\12\124\7\uffff\6\124\16\uffff"+
-            "\1\122\6\uffff\1\123\4\uffff\2\121\3\124\1\121\7\uffff\1\123"+
-            "\3\uffff\1\123\1\uffff\1\123\1\122\1\123",
+            "\1\124\4\uffff\1\124\10\uffff\12\123\7\uffff\6\123\16\uffff"+
+            "\1\122\6\uffff\1\124\4\uffff\2\121\3\123\1\121\7\uffff\1\124"+
+            "\3\uffff\1\124\1\uffff\1\124\1\122\1\124",
             "",
             "",
             "\32\125\5\uffff\1\126\32\125",
@@ -3938,31 +3967,29 @@ public class GoLexer extends Lexer {
             "\1\156\16\uffff\1\155\1\160",
             "\1\163\1\161",
             "\1\164",
-            "",
-            "\1\167",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\170",
+            "\1\166",
             "\1\171",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\172",
             "\1\173",
             "\1\174",
             "\1\175",
-            "",
-            "\12\176",
+            "\1\176",
             "\1\177",
-            "\1\u0080",
+            "\12\u0080",
+            "",
             "\1\u0081",
-            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\23\25\1\u0082\6\25",
+            "\1\u0082",
+            "\1\u0083",
+            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\23\25\1\u0084\6\25",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
-            "\1\u0085",
-            "\1\u0086",
             "\1\u0087",
             "\1\u0088",
             "\1\u0089",
@@ -3972,13 +3999,15 @@ public class GoLexer extends Lexer {
             "\1\u008d",
             "\1\u008e",
             "\1\u008f",
-            "\42\111\1\110\36\111\32\106\1\111\1\107\4\111\32\106\uff85"+
+            "\1\u0090",
+            "\1\u0091",
+            "\1\111\4\uffff\1\111\10\uffff\4\u0095\4\u0097\2\u0096\7\uffff"+
+            "\6\u0096\16\uffff\1\u0094\6\uffff\1\111\4\uffff\1\u0096\1\u0092"+
+            "\3\u0096\1\u0092\7\uffff\1\111\3\uffff\1\111\1\uffff\1\111\1"+
+            "\u0093",
+            "\42\111\1\110\36\111\32\107\1\111\1\106\4\111\32\107\uff85"+
             "\111",
-            "\1\111\4\uffff\1\111\10\uffff\4\u0093\4\u0094\2\u0095\7\uffff"+
-            "\6\u0095\16\uffff\1\u0091\6\uffff\1\111\4\uffff\1\u0095\1\u0092"+
-            "\3\u0095\1\u0092\7\uffff\1\111\3\uffff\1\111\1\uffff\1\111\1"+
-            "\u0090",
-            "\1\u0096\75\uffff\1\u0096",
+            "\1\u0098\75\uffff\1\u0098",
             "",
             "",
             "\1\114\1\uffff\12\113\13\uffff\1\114\37\uffff\1\114",
@@ -3987,12 +4016,12 @@ public class GoLexer extends Lexer {
             "\1\114\1\uffff\12\116\13\uffff\1\114\37\uffff\1\114",
             "",
             "",
-            "\12\124\7\uffff\6\124\32\uffff\6\124",
+            "\12\123\7\uffff\6\123\32\uffff\6\123",
             "",
             "",
             "",
             "\32\125\5\uffff\1\126\32\125",
-            "\1\u0096\75\uffff\1\u0096",
+            "\1\u0098\75\uffff\1\u0098",
             "",
             "",
             "",
@@ -4002,13 +4031,6 @@ public class GoLexer extends Lexer {
             "",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u009a",
             "",
             "",
             "",
@@ -4019,45 +4041,54 @@ public class GoLexer extends Lexer {
             "",
             "",
             "",
+            "",
+            "",
+            "",
             "\1\u009e",
             "",
             "",
             "",
-            "",
-            "",
-            "",
-            "\1\u009f",
             "\1\u00a0",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\u00a1",
-            "\1\u00a2\1\u00a3",
-            "\1\u00a4\3\uffff\1\u00a5",
-            "\1\u00a6",
-            "\12\176",
-            "\1\u00a7",
-            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
+            "\1\u00a2",
+            "\1\u00a3",
+            "\1\u00a4\1\u00a5",
+            "\1\u00a6\3\uffff\1\u00a7",
+            "\1\u00a8",
+            "\12\u0080",
             "\1\u00a9",
-            "\1\u00aa",
-            "",
-            "",
+            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
             "\1\u00ab",
             "\1\u00ac",
-            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
+            "",
+            "",
+            "\1\u00ad",
             "\1\u00ae",
-            "\1\u00af",
+            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
             "\1\u00b0",
             "\1\u00b1",
             "\1\u00b2",
             "\1\u00b3",
             "\1\u00b4",
+            "\1\u00b5",
+            "\1\u00b6",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
-            "\12\u00b6\7\uffff\6\u00b6\32\uffff\6\u00b6",
-            "\12\u00b7\7\uffff\6\u00b7\32\uffff\6\u00b7",
             "\60\111\12\u00b8\7\111\6\u00b8\32\111\6\u00b8\uff99\111",
-            "\60\111\10\u00b9\2\u00b8\7\111\6\u00b8\32\111\6\u00b8\uff99"+
+            "\12\u00b9\7\uffff\6\u00b9\32\uffff\6\u00b9",
+            "\12\u00ba\7\uffff\6\u00ba\32\uffff\6\u00ba",
+            "\60\111\10\u00bb\2\u00b8\7\111\6\u00b8\32\111\6\u00b8\uff99"+
             "\111",
-            "\60\111\10\u00ba\2\u00b8\7\111\6\u00b8\32\111\6\u00b8\uff99"+
+            "\12\u00bc\7\uffff\6\u00bc\32\uffff\6\u00bc",
+            "\60\111\10\u00bd\2\u00b8\7\111\6\u00b8\32\111\6\u00b8\uff99"+
             "\111",
-            "\12\u00bb\7\uffff\6\u00bb\32\uffff\6\u00bb",
             "",
             "",
             "",
@@ -4067,123 +4098,123 @@ public class GoLexer extends Lexer {
             "",
             "",
             "",
-            "\1\u00bc",
+            "\1\u00be",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
-            "\1\u00bf",
-            "\1\u00c0",
             "\1\u00c1",
             "\1\u00c2",
-            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
+            "\1\u00c3",
             "\1\u00c4",
-            "",
-            "\1\u00c5",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
-            "\1\u00c7",
-            "\1\u00c8",
+            "\1\u00c6",
             "",
+            "\1\u00c7",
+            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
             "\1\u00c9",
             "\1\u00ca",
+            "",
             "\1\u00cb",
             "\1\u00cc",
             "\1\u00cd",
             "\1\u00ce",
+            "\1\u00cf",
+            "\1\u00d0",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
             "",
-            "\12\u00d0\7\uffff\6\u00d0\32\uffff\6\u00d0",
-            "\12\u00d1\7\uffff\6\u00d1\32\uffff\6\u00d1",
-            "\42\111\1\110\36\111\32\106\1\111\1\107\4\111\32\106\uff85"+
+            "\42\111\1\110\36\111\32\107\1\111\1\106\4\111\32\107\uff85"+
             "\111",
-            "\42\111\1\110\15\111\10\u00d2\11\111\32\106\1\111\1\107\4\111"+
-            "\32\106\uff85\111",
-            "\42\111\1\110\15\111\10\u00d3\11\111\32\106\1\111\1\107\4\111"+
-            "\32\106\uff85\111",
-            "\1\u00d4\36\uffff\32\u00d5\1\uffff\1\u00d6\4\uffff\32\u00d5",
+            "\12\u00d2\7\uffff\6\u00d2\32\uffff\6\u00d2",
+            "\12\u00d3\7\uffff\6\u00d3\32\uffff\6\u00d3",
+            "\42\111\1\110\15\111\10\u00d4\11\111\32\107\1\111\1\106\4\111"+
+            "\32\107\uff85\111",
+            "\1\u00d5\36\uffff\32\u00d6\1\uffff\1\u00d7\4\uffff\32\u00d6",
+            "\42\111\1\110\15\111\10\u00d8\11\111\32\107\1\111\1\106\4\111"+
+            "\32\107\uff85\111",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
             "",
             "",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
-            "\1\u00d9",
-            "\1\u00da",
-            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
-            "",
+            "\1\u00db",
             "\1\u00dc",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
             "",
             "\1\u00de",
-            "\1\u00df",
-            "\1\u00e0",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
+            "",
+            "\1\u00e0",
+            "\1\u00e1",
             "\1\u00e2",
-            "\1\u00e3",
+            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
             "\1\u00e4",
             "\1\u00e5",
+            "\1\u00e6",
+            "\1\u00e7",
             "",
-            "\12\u00e6\7\uffff\6\u00e6\32\uffff\6\u00e6",
-            "\12\u00e7\7\uffff\6\u00e7\32\uffff\6\u00e7",
-            "\42\111\1\110\36\111\32\106\1\111\1\107\4\111\32\106\uff85"+
+            "\12\u00e8\7\uffff\6\u00e8\32\uffff\6\u00e8",
+            "\12\u00e9\7\uffff\6\u00e9\32\uffff\6\u00e9",
+            "\42\111\1\110\36\111\32\107\1\111\1\106\4\111\32\107\uff85"+
             "\111",
-            "\42\111\1\110\36\111\32\106\1\111\1\107\4\111\32\106\uff85"+
+            "\1\u0098\75\uffff\1\u0098",
+            "\1\u00d5\36\uffff\32\u00d6\1\uffff\1\u00d7\4\uffff\32\u00d6",
+            "\10\u00ec\2\u0096\7\uffff\6\u0096\16\uffff\1\u0094\13\uffff"+
+            "\6\u0096\16\uffff\1\u00eb",
+            "\42\111\1\110\36\111\32\107\1\111\1\106\4\111\32\107\uff85"+
             "\111",
-            "\1\u0096\75\uffff\1\u0096",
-            "\1\u00d4\36\uffff\32\u00d5\1\uffff\1\u00d6\4\uffff\32\u00d5",
-            "\10\u00ea\2\u0095\7\uffff\6\u0095\16\uffff\1\u0091\13\uffff"+
-            "\6\u0095\16\uffff\1\u00e9",
             "",
-            "",
-            "\1\u00eb",
-            "\1\u00ec",
             "",
             "\1\u00ed",
+            "\1\u00ee",
             "",
-            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
             "\1\u00ef",
-            "\1\u00f0",
+            "",
+            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
+            "\1\u00f1",
+            "\1\u00f2",
             "",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
-            "\12\u00f5\7\uffff\6\u00f5\32\uffff\6\u00f5",
-            "\12\u00f6\7\uffff\6\u00f6\32\uffff\6\u00f6",
-            "",
             "\12\u00f7\7\uffff\6\u00f7\32\uffff\6\u00f7",
-            "\10\u00f8\2\u00bb\7\uffff\6\u00bb\32\uffff\6\u00bb",
-            "\1\u00f9",
-            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
+            "\12\u00f8\7\uffff\6\u00f8\32\uffff\6\u00f8",
+            "",
+            "\12\u00f9\7\uffff\6\u00f9\32\uffff\6\u00f9",
+            "\10\u00fa\2\u00bc\7\uffff\6\u00bc\32\uffff\6\u00bc",
             "\1\u00fb",
+            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
+            "\1\u00fd",
             "",
-            "\1\u00fc",
+            "\1\u00fe",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
             "",
             "",
             "",
             "",
-            "\42\111\1\110\36\111\32\106\1\111\1\107\4\111\32\106\uff85"+
+            "\42\111\1\110\36\111\32\107\1\111\1\106\4\111\32\107\uff85"+
             "\111",
-            "\12\u00fe\7\uffff\6\u00fe\32\uffff\6\u00fe",
-            "\12\u00ff\7\uffff\6\u00ff\32\uffff\6\u00ff",
-            "\1\u00d4\15\uffff\10\u0100\11\uffff\32\u00d5\1\uffff\1\u00d6"+
-            "\4\uffff\32\u00d5",
+            "\12\u0100\7\uffff\6\u0100\32\uffff\6\u0100",
+            "\12\u0101\7\uffff\6\u0101\32\uffff\6\u0101",
+            "\1\u00d5\15\uffff\10\u0102\11\uffff\32\u00d6\1\uffff\1\u00d7"+
+            "\4\uffff\32\u00d6",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
             "",
-            "\1\u0102",
-            "\1\u0103",
+            "\1\u0104",
+            "\1\u0105",
             "",
-            "\12\u0104\7\uffff\6\u0104\32\uffff\6\u0104",
-            "\12\u0105\7\uffff\6\u0105\32\uffff\6\u0105",
-            "\1\u00d4\36\uffff\32\u00d5\1\uffff\1\u00d6\4\uffff\32\u00d5",
+            "\12\u0106\7\uffff\6\u0106\32\uffff\6\u0106",
+            "\12\u0107\7\uffff\6\u0107\32\uffff\6\u0107",
+            "\1\u00d5\36\uffff\32\u00d6\1\uffff\1\u00d7\4\uffff\32\u00d6",
             "",
-            "\1\u0106",
+            "\1\u0108",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
-            "\12\u0108\7\uffff\6\u0108\32\uffff\6\u0108",
-            "\12\u0109\7\uffff\6\u0109\32\uffff\6\u0109",
-            "\1\u010a",
-            "",
+            "\12\u010a\7\uffff\6\u010a\32\uffff\6\u010a",
             "\12\u010b\7\uffff\6\u010b\32\uffff\6\u010b",
-            "\1\u00d4\36\uffff\32\u00d5\1\uffff\1\u00d6\4\uffff\32\u00d5",
+            "\1\u010c",
+            "",
+            "\12\u010d\7\uffff\6\u010d\32\uffff\6\u010d",
+            "\1\u00d5\36\uffff\32\u00d6\1\uffff\1\u00d7\4\uffff\32\u00d6",
             "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
-            "\1\u00d4\36\uffff\32\u00d5\1\uffff\1\u00d6\4\uffff\32\u00d5",
+            "\1\u00d5\36\uffff\32\u00d6\1\uffff\1\u00d7\4\uffff\32\u00d6",
             ""
     };
 
@@ -4217,19 +4248,87 @@ public class GoLexer extends Lexer {
             this.transition = DFA26_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( BREAK | CASE | CHAN | CONST | CONTINUE | DEFAULT | DEFER | ELSE | FALLTHROUGH | FOR | FUNC | GO | GOTO | IF | IMPORT | INTERFACE | MAP | PACKAGE | RANGE | RETURN | SELECT | STRUCT | SWITCH | TYPE | VAR | ID | STRING | INT_LIT | DECIMALS | EXPONENT | FLOAT_LIT | ESCAPED_CHAR | BYTE_VALUE | UNICODE_VALUE | CHAR_LIT | INTERPRETED_STRING_LIT | RAW_STRING_LIT | STRING_LIT | COMMENT | WS | PLUS | MINUS | MULTIPLY | DIVIDE | MODULUS | AMPERSAND | BOR | BXOR | BSHIFTL | BSHIFTR | BANDNOT | AND | OR | CHANOP | INCR | DECR | EQUAL | NOTEQUAL | LGT | SMT | ASSIGN | ASSIGNINIT | PLUSASSIGN | MINUSASSIGN | MULTIPLYASSIGN | DIVIDEASSIGN | MODASSIGN | BANDASSIGN | BORASSIGN | BXORASSIGN | BSHIFTLASSIGN | BSHIFTRASSIGN | BANDNOTASSIGN | SMTASSIGN | LGTASSIGN | BRACEOPEN | BRACECLOSE | SQBRACEOPEN | SQBRACECLOSE | RBRACEOPEN | RBRACECLOSE | SLICE | SELECTOR | PARAMS | COMMA | SEPARATOR );";
+            return "1:1: Tokens : ( BREAK | CASE | CHAN | CONST | CONTINUE | DEFAULT | DEFER | ELSE | FALLTHROUGH | FOR | FUNC | GO | GOTO | IF | IMPORT | INTERFACE | MAP | PACKAGE | RANGE | RETURN | SELECT | STRUCT | SWITCH | TYPE | VAR | ID | STRING | INT_LIT | DECIMALS | EXPONENT | FLOAT_LIT | ESCAPED_CHAR | BYTE_VALUE | UNICODE_VALUE | CHAR_LIT | INTERPRETED_STRING_LIT | RAW_STRING_LIT | STRING_LIT | COMMENT | WS | PLUS | MINUS | MULTIPLY | DIVIDE | MODULUS | AMPERSAND | BOR | BXOR | BSHIFTL | BSHIFTR | BANDNOT | AND | OR | CHANOP | INCR | DECR | EQUAL | NOTEQUAL | NOT | LGT | SMT | ASSIGN | ASSIGNINIT | PLUSASSIGN | MINUSASSIGN | MULTIPLYASSIGN | DIVIDEASSIGN | MODASSIGN | BANDASSIGN | BORASSIGN | BXORASSIGN | BSHIFTLASSIGN | BSHIFTRASSIGN | BANDNOTASSIGN | SMTOREQUAL | LGTOREQUAL | BRACEOPEN | BRACECLOSE | SQBRACEOPEN | SQBRACECLOSE | RBRACEOPEN | RBRACECLOSE | SLICE | SELECTOR | PARAMS | COMMA | SEPARATOR );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA26_216 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA26_216=='\"') ) {s = 72;}
+
+                        else if ( (LA26_216=='\\') ) {s = 70;}
+
+                        else if ( ((LA26_216>='A' && LA26_216<='Z')||(LA26_216>='a' && LA26_216<='z')) ) {s = 71;}
+
+                        else if ( ((LA26_216>='\u0000' && LA26_216<='!')||(LA26_216>='#' && LA26_216<='@')||LA26_216=='['||(LA26_216>=']' && LA26_216<='`')||(LA26_216>='{' && LA26_216<='\uFFFF')) ) {s = 73;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA26_187 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA26_187>='0' && LA26_187<='7')) ) {s = 212;}
+
+                        else if ( (LA26_187=='\"') ) {s = 72;}
+
+                        else if ( (LA26_187=='\\') ) {s = 70;}
+
+                        else if ( ((LA26_187>='A' && LA26_187<='Z')||(LA26_187>='a' && LA26_187<='z')) ) {s = 71;}
+
+                        else if ( ((LA26_187>='\u0000' && LA26_187<='!')||(LA26_187>='#' && LA26_187<='/')||(LA26_187>='8' && LA26_187<='@')||LA26_187=='['||(LA26_187>=']' && LA26_187<='`')||(LA26_187>='{' && LA26_187<='\uFFFF')) ) {s = 73;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA26_149 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA26_149>='0' && LA26_149<='7')) ) {s = 187;}
+
+                        else if ( ((LA26_149>='\u0000' && LA26_149<='/')||(LA26_149>=':' && LA26_149<='@')||(LA26_149>='G' && LA26_149<='`')||(LA26_149>='g' && LA26_149<='\uFFFF')) ) {s = 73;}
+
+                        else if ( ((LA26_149>='8' && LA26_149<='9')||(LA26_149>='A' && LA26_149<='F')||(LA26_149>='a' && LA26_149<='f')) ) {s = 184;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
+                        int LA26_212 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA26_212=='\"') ) {s = 72;}
+
+                        else if ( (LA26_212=='\\') ) {s = 70;}
+
+                        else if ( ((LA26_212>='A' && LA26_212<='Z')||(LA26_212>='a' && LA26_212<='z')) ) {s = 71;}
+
+                        else if ( ((LA26_212>='\u0000' && LA26_212<='!')||(LA26_212>='#' && LA26_212<='@')||LA26_212=='['||(LA26_212>=']' && LA26_212<='`')||(LA26_212>='{' && LA26_212<='\uFFFF')) ) {s = 73;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
+                        int LA26_151 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA26_151>='0' && LA26_151<='7')) ) {s = 189;}
+
+                        else if ( ((LA26_151>='\u0000' && LA26_151<='/')||(LA26_151>=':' && LA26_151<='@')||(LA26_151>='G' && LA26_151<='`')||(LA26_151>='g' && LA26_151<='\uFFFF')) ) {s = 73;}
+
+                        else if ( ((LA26_151>='8' && LA26_151<='9')||(LA26_151>='A' && LA26_151<='F')||(LA26_151>='a' && LA26_151<='f')) ) {s = 184;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 5 : 
                         int LA26_15 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA26_15>='A' && LA26_15<='Z')||(LA26_15>='a' && LA26_15<='z')) ) {s = 70;}
+                        if ( (LA26_15=='\\') ) {s = 70;}
 
-                        else if ( (LA26_15=='\\') ) {s = 71;}
+                        else if ( ((LA26_15>='A' && LA26_15<='Z')||(LA26_15>='a' && LA26_15<='z')) ) {s = 71;}
 
                         else if ( (LA26_15=='\"') ) {s = 72;}
 
@@ -4237,139 +4336,71 @@ public class GoLexer extends Lexer {
 
                         if ( s>=0 ) return s;
                         break;
-                    case 1 : 
-                        int LA26_245 = input.LA(1);
+                    case 6 : 
+                        int LA26_247 = input.LA(1);
 
                         s = -1;
-                        if ( (LA26_245=='\"') ) {s = 72;}
+                        if ( (LA26_247=='\"') ) {s = 72;}
 
-                        else if ( ((LA26_245>='A' && LA26_245<='Z')||(LA26_245>='a' && LA26_245<='z')) ) {s = 70;}
+                        else if ( (LA26_247=='\\') ) {s = 70;}
 
-                        else if ( (LA26_245=='\\') ) {s = 71;}
+                        else if ( ((LA26_247>='A' && LA26_247<='Z')||(LA26_247>='a' && LA26_247<='z')) ) {s = 71;}
 
-                        else if ( ((LA26_245>='\u0000' && LA26_245<='!')||(LA26_245>='#' && LA26_245<='@')||LA26_245=='['||(LA26_245>=']' && LA26_245<='`')||(LA26_245>='{' && LA26_245<='\uFFFF')) ) {s = 73;}
+                        else if ( ((LA26_247>='\u0000' && LA26_247<='!')||(LA26_247>='#' && LA26_247<='@')||LA26_247=='['||(LA26_247>=']' && LA26_247<='`')||(LA26_247>='{' && LA26_247<='\uFFFF')) ) {s = 73;}
 
                         if ( s>=0 ) return s;
                         break;
-                    case 2 : 
-                        int LA26_147 = input.LA(1);
+                    case 7 : 
+                        int LA26_189 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA26_147>='\u0000' && LA26_147<='/')||(LA26_147>=':' && LA26_147<='@')||(LA26_147>='G' && LA26_147<='`')||(LA26_147>='g' && LA26_147<='\uFFFF')) ) {s = 73;}
+                        if ( ((LA26_189>='0' && LA26_189<='7')) ) {s = 216;}
 
-                        else if ( ((LA26_147>='0' && LA26_147<='7')) ) {s = 185;}
+                        else if ( (LA26_189=='\"') ) {s = 72;}
 
-                        else if ( ((LA26_147>='8' && LA26_147<='9')||(LA26_147>='A' && LA26_147<='F')||(LA26_147>='a' && LA26_147<='f')) ) {s = 184;}
+                        else if ( (LA26_189=='\\') ) {s = 70;}
+
+                        else if ( ((LA26_189>='A' && LA26_189<='Z')||(LA26_189>='a' && LA26_189<='z')) ) {s = 71;}
+
+                        else if ( ((LA26_189>='\u0000' && LA26_189<='!')||(LA26_189>='#' && LA26_189<='/')||(LA26_189>='8' && LA26_189<='@')||LA26_189=='['||(LA26_189>=']' && LA26_189<='`')||(LA26_189>='{' && LA26_189<='\uFFFF')) ) {s = 73;}
 
                         if ( s>=0 ) return s;
                         break;
-                    case 3 : 
+                    case 8 : 
+                        int LA26_71 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA26_71=='\"') ) {s = 72;}
+
+                        else if ( (LA26_71=='\\') ) {s = 70;}
+
+                        else if ( ((LA26_71>='A' && LA26_71<='Z')||(LA26_71>='a' && LA26_71<='z')) ) {s = 71;}
+
+                        else if ( ((LA26_71>='\u0000' && LA26_71<='!')||(LA26_71>='#' && LA26_71<='@')||LA26_71=='['||(LA26_71>=']' && LA26_71<='`')||(LA26_71>='{' && LA26_71<='\uFFFF')) ) {s = 73;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 9 : 
+                        int LA26_146 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA26_146>='\u0000' && LA26_146<='/')||(LA26_146>=':' && LA26_146<='@')||(LA26_146>='G' && LA26_146<='`')||(LA26_146>='g' && LA26_146<='\uFFFF')) ) {s = 73;}
+
+                        else if ( ((LA26_146>='0' && LA26_146<='9')||(LA26_146>='A' && LA26_146<='F')||(LA26_146>='a' && LA26_146<='f')) ) {s = 184;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 10 : 
                         int LA26_184 = input.LA(1);
 
                         s = -1;
                         if ( (LA26_184=='\"') ) {s = 72;}
 
-                        else if ( ((LA26_184>='A' && LA26_184<='Z')||(LA26_184>='a' && LA26_184<='z')) ) {s = 70;}
+                        else if ( (LA26_184=='\\') ) {s = 70;}
 
-                        else if ( (LA26_184=='\\') ) {s = 71;}
+                        else if ( ((LA26_184>='A' && LA26_184<='Z')||(LA26_184>='a' && LA26_184<='z')) ) {s = 71;}
 
                         else if ( ((LA26_184>='\u0000' && LA26_184<='!')||(LA26_184>='#' && LA26_184<='@')||LA26_184=='['||(LA26_184>=']' && LA26_184<='`')||(LA26_184>='{' && LA26_184<='\uFFFF')) ) {s = 73;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
-                        int LA26_211 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA26_211=='\"') ) {s = 72;}
-
-                        else if ( ((LA26_211>='A' && LA26_211<='Z')||(LA26_211>='a' && LA26_211<='z')) ) {s = 70;}
-
-                        else if ( (LA26_211=='\\') ) {s = 71;}
-
-                        else if ( ((LA26_211>='\u0000' && LA26_211<='!')||(LA26_211>='#' && LA26_211<='@')||LA26_211=='['||(LA26_211>=']' && LA26_211<='`')||(LA26_211>='{' && LA26_211<='\uFFFF')) ) {s = 73;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 5 : 
-                        int LA26_186 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA26_186=='\"') ) {s = 72;}
-
-                        else if ( ((LA26_186>='A' && LA26_186<='Z')||(LA26_186>='a' && LA26_186<='z')) ) {s = 70;}
-
-                        else if ( (LA26_186=='\\') ) {s = 71;}
-
-                        else if ( ((LA26_186>='0' && LA26_186<='7')) ) {s = 211;}
-
-                        else if ( ((LA26_186>='\u0000' && LA26_186<='!')||(LA26_186>='#' && LA26_186<='/')||(LA26_186>='8' && LA26_186<='@')||LA26_186=='['||(LA26_186>=']' && LA26_186<='`')||(LA26_186>='{' && LA26_186<='\uFFFF')) ) {s = 73;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 6 : 
-                        int LA26_148 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA26_148>='\u0000' && LA26_148<='/')||(LA26_148>=':' && LA26_148<='@')||(LA26_148>='G' && LA26_148<='`')||(LA26_148>='g' && LA26_148<='\uFFFF')) ) {s = 73;}
-
-                        else if ( ((LA26_148>='0' && LA26_148<='7')) ) {s = 186;}
-
-                        else if ( ((LA26_148>='8' && LA26_148<='9')||(LA26_148>='A' && LA26_148<='F')||(LA26_148>='a' && LA26_148<='f')) ) {s = 184;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 7 : 
-                        int LA26_185 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA26_185=='\"') ) {s = 72;}
-
-                        else if ( ((LA26_185>='A' && LA26_185<='Z')||(LA26_185>='a' && LA26_185<='z')) ) {s = 70;}
-
-                        else if ( (LA26_185=='\\') ) {s = 71;}
-
-                        else if ( ((LA26_185>='0' && LA26_185<='7')) ) {s = 210;}
-
-                        else if ( ((LA26_185>='\u0000' && LA26_185<='!')||(LA26_185>='#' && LA26_185<='/')||(LA26_185>='8' && LA26_185<='@')||LA26_185=='['||(LA26_185>=']' && LA26_185<='`')||(LA26_185>='{' && LA26_185<='\uFFFF')) ) {s = 73;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 8 : 
-                        int LA26_70 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA26_70=='\"') ) {s = 72;}
-
-                        else if ( ((LA26_70>='A' && LA26_70<='Z')||(LA26_70>='a' && LA26_70<='z')) ) {s = 70;}
-
-                        else if ( (LA26_70=='\\') ) {s = 71;}
-
-                        else if ( ((LA26_70>='\u0000' && LA26_70<='!')||(LA26_70>='#' && LA26_70<='@')||LA26_70=='['||(LA26_70>=']' && LA26_70<='`')||(LA26_70>='{' && LA26_70<='\uFFFF')) ) {s = 73;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 9 : 
-                        int LA26_210 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA26_210=='\"') ) {s = 72;}
-
-                        else if ( ((LA26_210>='A' && LA26_210<='Z')||(LA26_210>='a' && LA26_210<='z')) ) {s = 70;}
-
-                        else if ( (LA26_210=='\\') ) {s = 71;}
-
-                        else if ( ((LA26_210>='\u0000' && LA26_210<='!')||(LA26_210>='#' && LA26_210<='@')||LA26_210=='['||(LA26_210>=']' && LA26_210<='`')||(LA26_210>='{' && LA26_210<='\uFFFF')) ) {s = 73;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 10 : 
-                        int LA26_146 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA26_146>='0' && LA26_146<='9')||(LA26_146>='A' && LA26_146<='F')||(LA26_146>='a' && LA26_146<='f')) ) {s = 184;}
-
-                        else if ( ((LA26_146>='\u0000' && LA26_146<='/')||(LA26_146>=':' && LA26_146<='@')||(LA26_146>='G' && LA26_146<='`')||(LA26_146>='g' && LA26_146<='\uFFFF')) ) {s = 73;}
 
                         if ( s>=0 ) return s;
                         break;

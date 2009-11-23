@@ -6,7 +6,7 @@ lexer grammar GoLexer;
 
 BREAK	:	'break';
 
-// $>
+
 CASE	:	'case';
 CHAN	:	'chan';
 CONST	:	'const';
@@ -33,7 +33,7 @@ STRUCT	:	'struct';
 SWITCH	:	'switch';
 TYPE	:	'type';
 VAR	:	'var';
-
+// $>
 fragment
 UNICODE_LETTER	:	'a'..'z' | 'A'..'Z';
 
@@ -166,13 +166,14 @@ INCR	:	'++';
 DECR	:	'--';
 EQUAL	:	'==';
 NOTEQUAL:	'!=';
+NOT	:	'!';
 LGT	:	'>';
 SMT	:	'<';
 
 
 ASSIGN	:	'=';
 ASSIGNINIT
-	:	':' ASSIGN;
+	:	SLICE ASSIGN;
 
 PLUSASSIGN
 	:	PLUS ASSIGN;
@@ -196,9 +197,9 @@ BSHIFTRASSIGN
 	:	BSHIFTR ASSIGN;
 BANDNOTASSIGN
 	:	BANDNOT ASSIGN;
-SMTASSIGN
+SMTOREQUAL
 	:	SMT ASSIGN;
-LGTASSIGN
+LGTOREQUAL
 	:	LGT ASSIGN;
 
 BRACEOPEN

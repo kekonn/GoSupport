@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/bloodsplatter/Projects/GoSupport/GoParser.g 2009-11-18 22:11:54
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/bloodsplatter/Projects/GoSupport/GoParser.g 2009-11-23 09:32:36
 package be.jonas.gogrammar
 
 import org.antlr.runtime.*;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class GoParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "BREAK", "CASE", "CHAN", "CONST", "CONTINUE", "DEFAULT", "DEFER", "ELSE", "FALLTHROUGH", "FOR", "FUNC", "GO", "GOTO", "IF", "IMPORT", "INTERFACE", "MAP", "PACKAGE", "RANGE", "RETURN", "SELECT", "STRUCT", "SWITCH", "TYPE", "VAR", "UNICODE_LETTER", "LETTER", "DIGIT", "ID", "ESC_SEQ", "STRING", "HEX_DIGIT", "UNICODE_ESC", "OCTAL_ESC", "DECIMAL_LIT", "OCTAL_LIT", "HEX_LIT", "INT_LIT", "DECIMALS", "EXPONENT", "FLOAT_LIT", "ESCAPED_CHAR", "BIG_U_VALUE", "LITTLE_U_VALUE", "HEX_BYTE_VALUE", "OCTAL_DIGIT", "OCTAL_BYTE_VALUE", "BYTE_VALUE", "UNICODE_VALUE", "CHAR_LIT", "INTERPRETED_STRING_LIT", "RAW_STRING_LIT", "STRINGLIT", "STRING_LIT", "COMMENT", "WS", "PLUS", "MINUS", "MULTIPLY", "DIVIDE", "MODULUS", "AMPERSAND", "BOR", "BXOR", "BSHIFTL", "BSHIFTR", "BANDNOT", "AND", "OR", "CHANOP", "INCR", "DECR", "EQUAL", "NOTEQUAL", "LGT", "SMT", "ASSIGN", "ASSIGNINIT", "PLUSASSIGN", "MINUSASSIGN", "MULTIPLYASSIGN", "DIVIDEASSIGN", "MODASSIGN", "BANDASSIGN", "BORASSIGN", "BXORASSIGN", "BSHIFTLASSIGN", "BSHIFTRASSIGN", "BANDNOTASSIGN", "SMTASSIGN", "LGTASSIGN", "BRACEOPEN", "BRACECLOSE", "SQBRACEOPEN", "SQBRACECLOSE", "RBRACEOPEN", "RBRACECLOSE", "SLICE", "SELECTOR", "PARAMS", "COMMA", "SEPARATOR", "'.'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "BREAK", "CASE", "CHAN", "CONST", "CONTINUE", "DEFAULT", "DEFER", "ELSE", "FALLTHROUGH", "FOR", "FUNC", "GO", "GOTO", "IF", "IMPORT", "INTERFACE", "MAP", "PACKAGE", "RANGE", "RETURN", "SELECT", "STRUCT", "SWITCH", "TYPE", "VAR", "UNICODE_LETTER", "LETTER", "DIGIT", "ID", "ESC_SEQ", "STRING", "HEX_DIGIT", "UNICODE_ESC", "OCTAL_ESC", "DECIMAL_LIT", "OCTAL_LIT", "HEX_LIT", "INT_LIT", "DECIMALS", "EXPONENT", "FLOAT_LIT", "ESCAPED_CHAR", "BIG_U_VALUE", "LITTLE_U_VALUE", "HEX_BYTE_VALUE", "OCTAL_DIGIT", "OCTAL_BYTE_VALUE", "BYTE_VALUE", "UNICODE_VALUE", "CHAR_LIT", "INTERPRETED_STRING_LIT", "RAW_STRING_LIT", "STRINGLIT", "STRING_LIT", "COMMENT", "WS", "PLUS", "MINUS", "MULTIPLY", "DIVIDE", "MODULUS", "AMPERSAND", "BOR", "BXOR", "BSHIFTL", "BSHIFTR", "BANDNOT", "AND", "OR", "CHANOP", "INCR", "DECR", "EQUAL", "NOTEQUAL", "LGT", "SMT", "ASSIGN", "ASSIGNINIT", "PLUSASSIGN", "MINUSASSIGN", "MULTIPLYASSIGN", "DIVIDEASSIGN", "MODASSIGN", "BANDASSIGN", "BORASSIGN", "BXORASSIGN", "BSHIFTLASSIGN", "BSHIFTRASSIGN", "BANDNOTASSIGN", "SMTASSIGN", "LGTASSIGN", "BRACEOPEN", "BRACECLOSE", "SQBRACEOPEN", "SQBRACECLOSE", "RBRACEOPEN", "RBRACECLOSE", "SLICE", "SELECTOR", "PARAMS", "COMMA", "SEPARATOR"
     };
     public static final int PACKAGE=21;
     public static final int DECIMALS=42;
@@ -78,7 +78,6 @@ public class GoParser extends Parser {
     public static final int BXORASSIGN=89;
     public static final int BOR=66;
     public static final int EQUAL=76;
-    public static final int T__106=106;
     public static final int UNICODE_VALUE=52;
     public static final int PLUS=60;
     public static final int BXOR=67;
@@ -134,13 +133,13 @@ public class GoParser extends Parser {
 
 
     // $ANTLR start "packageName"
-    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:15:1: packageName : ID ;
+    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:10:1: packageName : ID ;
     public final void packageName() throws RecognitionException {
         try {
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:16:2: ( ID )
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:16:4: ID
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:11:2: ( ID )
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:11:4: ID
             {
-            match(input,ID,FOLLOW_ID_in_packageName42); 
+            match(input,ID,FOLLOW_ID_in_packageName33); 
 
             }
 
@@ -157,14 +156,14 @@ public class GoParser extends Parser {
 
 
     // $ANTLR start "packageClause"
-    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:17:1: packageClause : PACKAGE packageName ;
+    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:12:1: packageClause : PACKAGE packageName ;
     public final void packageClause() throws RecognitionException {
         try {
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:18:2: ( PACKAGE packageName )
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:18:4: PACKAGE packageName
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:13:2: ( PACKAGE packageName )
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:13:4: PACKAGE packageName
             {
-            match(input,PACKAGE,FOLLOW_PACKAGE_in_packageClause50); 
-            pushFollow(FOLLOW_packageName_in_packageClause52);
+            match(input,PACKAGE,FOLLOW_PACKAGE_in_packageClause41); 
+            pushFollow(FOLLOW_packageName_in_packageClause43);
             packageName();
 
             state._fsp--;
@@ -185,13 +184,13 @@ public class GoParser extends Parser {
 
 
     // $ANTLR start "importPath"
-    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:21:1: importPath : STRING_LIT ;
+    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:16:1: importPath : STRING_LIT ;
     public final void importPath() throws RecognitionException {
         try {
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:22:2: ( STRING_LIT )
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:22:4: STRING_LIT
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:17:2: ( STRING_LIT )
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:17:4: STRING_LIT
             {
-            match(input,STRING_LIT,FOLLOW_STRING_LIT_in_importPath63); 
+            match(input,STRING_LIT,FOLLOW_STRING_LIT_in_importPath54); 
 
             }
 
@@ -208,17 +207,17 @@ public class GoParser extends Parser {
 
 
     // $ANTLR start "importSpec"
-    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:23:1: importSpec : ( '.' | packageName ) importPath ;
+    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:18:1: importSpec : ( SELECTOR | packageName ) importPath ;
     public final void importSpec() throws RecognitionException {
         try {
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:24:2: ( ( '.' | packageName ) importPath )
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:24:4: ( '.' | packageName ) importPath
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:19:2: ( ( SELECTOR | packageName ) importPath )
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:19:4: ( SELECTOR | packageName ) importPath
             {
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:24:4: ( '.' | packageName )
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:19:4: ( SELECTOR | packageName )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==106) ) {
+            if ( (LA1_0==SELECTOR) ) {
                 alt1=1;
             }
             else if ( (LA1_0==ID) ) {
@@ -232,16 +231,16 @@ public class GoParser extends Parser {
             }
             switch (alt1) {
                 case 1 :
-                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:24:5: '.'
+                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:19:5: SELECTOR
                     {
-                    match(input,106,FOLLOW_106_in_importSpec72); 
+                    match(input,SELECTOR,FOLLOW_SELECTOR_in_importSpec63); 
 
                     }
                     break;
                 case 2 :
-                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:24:11: packageName
+                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:19:16: packageName
                     {
-                    pushFollow(FOLLOW_packageName_in_importSpec76);
+                    pushFollow(FOLLOW_packageName_in_importSpec67);
                     packageName();
 
                     state._fsp--;
@@ -252,7 +251,7 @@ public class GoParser extends Parser {
 
             }
 
-            pushFollow(FOLLOW_importPath_in_importSpec79);
+            pushFollow(FOLLOW_importPath_in_importSpec70);
             importPath();
 
             state._fsp--;
@@ -273,18 +272,18 @@ public class GoParser extends Parser {
 
 
     // $ANTLR start "importSpecList"
-    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:25:1: importSpecList : importSpec ( SEPARATOR importSpec )* SEPARATOR ;
+    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:20:1: importSpecList : importSpec ( SEPARATOR importSpec )* SEPARATOR ;
     public final void importSpecList() throws RecognitionException {
         try {
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:26:2: ( importSpec ( SEPARATOR importSpec )* SEPARATOR )
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:26:4: importSpec ( SEPARATOR importSpec )* SEPARATOR
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:21:2: ( importSpec ( SEPARATOR importSpec )* SEPARATOR )
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:21:4: importSpec ( SEPARATOR importSpec )* SEPARATOR
             {
-            pushFollow(FOLLOW_importSpec_in_importSpecList87);
+            pushFollow(FOLLOW_importSpec_in_importSpecList78);
             importSpec();
 
             state._fsp--;
 
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:26:15: ( SEPARATOR importSpec )*
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:21:15: ( SEPARATOR importSpec )*
             loop2:
             do {
                 int alt2=2;
@@ -293,7 +292,7 @@ public class GoParser extends Parser {
                 if ( (LA2_0==SEPARATOR) ) {
                     int LA2_1 = input.LA(2);
 
-                    if ( (LA2_1==ID||LA2_1==106) ) {
+                    if ( (LA2_1==ID||LA2_1==SELECTOR) ) {
                         alt2=1;
                     }
 
@@ -303,10 +302,10 @@ public class GoParser extends Parser {
 
                 switch (alt2) {
             	case 1 :
-            	    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:26:16: SEPARATOR importSpec
+            	    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:21:16: SEPARATOR importSpec
             	    {
-            	    match(input,SEPARATOR,FOLLOW_SEPARATOR_in_importSpecList90); 
-            	    pushFollow(FOLLOW_importSpec_in_importSpecList92);
+            	    match(input,SEPARATOR,FOLLOW_SEPARATOR_in_importSpecList81); 
+            	    pushFollow(FOLLOW_importSpec_in_importSpecList83);
             	    importSpec();
 
             	    state._fsp--;
@@ -320,7 +319,7 @@ public class GoParser extends Parser {
                 }
             } while (true);
 
-            match(input,SEPARATOR,FOLLOW_SEPARATOR_in_importSpecList96); 
+            match(input,SEPARATOR,FOLLOW_SEPARATOR_in_importSpecList87); 
 
             }
 
@@ -337,18 +336,18 @@ public class GoParser extends Parser {
 
 
     // $ANTLR start "importDecl"
-    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:27:1: importDecl : IMPORT ( importSpec | ( BRACEOPEN importSpecList BRACECLOSE ) ) ;
+    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:22:1: importDecl : IMPORT ( importSpec | ( BRACEOPEN importSpecList BRACECLOSE ) ) ;
     public final void importDecl() throws RecognitionException {
         try {
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:28:2: ( IMPORT ( importSpec | ( BRACEOPEN importSpecList BRACECLOSE ) ) )
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:28:4: IMPORT ( importSpec | ( BRACEOPEN importSpecList BRACECLOSE ) )
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:23:2: ( IMPORT ( importSpec | ( BRACEOPEN importSpecList BRACECLOSE ) ) )
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:23:4: IMPORT ( importSpec | ( BRACEOPEN importSpecList BRACECLOSE ) )
             {
-            match(input,IMPORT,FOLLOW_IMPORT_in_importDecl104); 
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:28:11: ( importSpec | ( BRACEOPEN importSpecList BRACECLOSE ) )
+            match(input,IMPORT,FOLLOW_IMPORT_in_importDecl95); 
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:23:11: ( importSpec | ( BRACEOPEN importSpecList BRACECLOSE ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==ID||LA3_0==106) ) {
+            if ( (LA3_0==ID||LA3_0==SELECTOR) ) {
                 alt3=1;
             }
             else if ( (LA3_0==BRACEOPEN) ) {
@@ -362,9 +361,9 @@ public class GoParser extends Parser {
             }
             switch (alt3) {
                 case 1 :
-                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:28:12: importSpec
+                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:23:12: importSpec
                     {
-                    pushFollow(FOLLOW_importSpec_in_importDecl107);
+                    pushFollow(FOLLOW_importSpec_in_importDecl98);
                     importSpec();
 
                     state._fsp--;
@@ -373,18 +372,18 @@ public class GoParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:28:25: ( BRACEOPEN importSpecList BRACECLOSE )
+                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:23:25: ( BRACEOPEN importSpecList BRACECLOSE )
                     {
-                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:28:25: ( BRACEOPEN importSpecList BRACECLOSE )
-                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:28:26: BRACEOPEN importSpecList BRACECLOSE
+                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:23:25: ( BRACEOPEN importSpecList BRACECLOSE )
+                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:23:26: BRACEOPEN importSpecList BRACECLOSE
                     {
-                    match(input,BRACEOPEN,FOLLOW_BRACEOPEN_in_importDecl112); 
-                    pushFollow(FOLLOW_importSpecList_in_importDecl114);
+                    match(input,BRACEOPEN,FOLLOW_BRACEOPEN_in_importDecl103); 
+                    pushFollow(FOLLOW_importSpecList_in_importDecl105);
                     importSpecList();
 
                     state._fsp--;
 
-                    match(input,BRACECLOSE,FOLLOW_BRACECLOSE_in_importDecl116); 
+                    match(input,BRACECLOSE,FOLLOW_BRACECLOSE_in_importDecl107); 
 
                     }
 
@@ -410,13 +409,13 @@ public class GoParser extends Parser {
 
 
     // $ANTLR start "tag"
-    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:30:1: tag : STRING_LIT ;
+    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:25:1: tag : STRING_LIT ;
     public final void tag() throws RecognitionException {
         try {
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:30:5: ( STRING_LIT )
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:30:7: STRING_LIT
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:25:5: ( STRING_LIT )
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:25:7: STRING_LIT
             {
-            match(input,STRING_LIT,FOLLOW_STRING_LIT_in_tag127); 
+            match(input,STRING_LIT,FOLLOW_STRING_LIT_in_tag118); 
 
             }
 
@@ -433,13 +432,13 @@ public class GoParser extends Parser {
 
 
     // $ANTLR start "label"
-    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:31:1: label : ID ;
+    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:26:1: label : ID ;
     public final void label() throws RecognitionException {
         try {
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:31:7: ( ID )
-            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:31:9: ID
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:26:7: ( ID )
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:26:9: ID
             {
-            match(input,ID,FOLLOW_ID_in_label134); 
+            match(input,ID,FOLLOW_ID_in_label125); 
 
             }
 
@@ -454,28 +453,195 @@ public class GoParser extends Parser {
     }
     // $ANTLR end "label"
 
+
+    // $ANTLR start "emptyStatement"
+    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:28:1: emptyStatement : ;
+    public final void emptyStatement() throws RecognitionException {
+        try {
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:29:2: ()
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:29:4: 
+            {
+            }
+
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "emptyStatement"
+
+
+    // $ANTLR start "qualifiedIdent"
+    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:30:1: qualifiedIdent : ( packageName SELECTOR )? ID ;
+    public final void qualifiedIdent() throws RecognitionException {
+        try {
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:31:2: ( ( packageName SELECTOR )? ID )
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:31:4: ( packageName SELECTOR )? ID
+            {
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:31:4: ( packageName SELECTOR )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
+
+            if ( (LA4_0==ID) ) {
+                int LA4_1 = input.LA(2);
+
+                if ( (LA4_1==SELECTOR) ) {
+                    alt4=1;
+                }
+            }
+            switch (alt4) {
+                case 1 :
+                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:31:5: packageName SELECTOR
+                    {
+                    pushFollow(FOLLOW_packageName_in_qualifiedIdent142);
+                    packageName();
+
+                    state._fsp--;
+
+                    match(input,SELECTOR,FOLLOW_SELECTOR_in_qualifiedIdent144); 
+
+                    }
+                    break;
+
+            }
+
+            match(input,ID,FOLLOW_ID_in_qualifiedIdent148); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "qualifiedIdent"
+
+
+    // $ANTLR start "typeName"
+    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:33:1: typeName : qualifiedIdent ;
+    public final void typeName() throws RecognitionException {
+        try {
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:33:9: ( qualifiedIdent )
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:33:11: qualifiedIdent
+            {
+            pushFollow(FOLLOW_qualifiedIdent_in_typeName157);
+            qualifiedIdent();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "typeName"
+
+
+    // $ANTLR start "type"
+    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:34:1: type : ( typeName | ( BRACEOPEN type BRACECLOSE ) );
+    public final void type() throws RecognitionException {
+        try {
+            // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:34:6: ( typeName | ( BRACEOPEN type BRACECLOSE ) )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
+
+            if ( (LA5_0==ID) ) {
+                alt5=1;
+            }
+            else if ( (LA5_0==BRACEOPEN) ) {
+                alt5=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 5, 0, input);
+
+                throw nvae;
+            }
+            switch (alt5) {
+                case 1 :
+                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:34:8: typeName
+                    {
+                    pushFollow(FOLLOW_typeName_in_type164);
+                    typeName();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+                case 2 :
+                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:34:19: ( BRACEOPEN type BRACECLOSE )
+                    {
+                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:34:19: ( BRACEOPEN type BRACECLOSE )
+                    // /Users/bloodsplatter/Projects/GoSupport/GoParser.g:34:20: BRACEOPEN type BRACECLOSE
+                    {
+                    match(input,BRACEOPEN,FOLLOW_BRACEOPEN_in_type169); 
+                    pushFollow(FOLLOW_type_in_type171);
+                    type();
+
+                    state._fsp--;
+
+                    match(input,BRACECLOSE,FOLLOW_BRACECLOSE_in_type173); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "type"
+
     // Delegated rules
 
 
  
 
-    public static final BitSet FOLLOW_ID_in_packageName42 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PACKAGE_in_packageClause50 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_packageName_in_packageClause52 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_LIT_in_importPath63 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_106_in_importSpec72 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_packageName_in_importSpec76 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_importPath_in_importSpec79 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_importSpec_in_importSpecList87 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-    public static final BitSet FOLLOW_SEPARATOR_in_importSpecList90 = new BitSet(new long[]{0x0000000100000000L,0x0000040000000000L});
-    public static final BitSet FOLLOW_importSpec_in_importSpecList92 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-    public static final BitSet FOLLOW_SEPARATOR_in_importSpecList96 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IMPORT_in_importDecl104 = new BitSet(new long[]{0x0000000100000000L,0x0000040080000000L});
-    public static final BitSet FOLLOW_importSpec_in_importDecl107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_BRACEOPEN_in_importDecl112 = new BitSet(new long[]{0x0000000100000000L,0x0000040000000000L});
-    public static final BitSet FOLLOW_importSpecList_in_importDecl114 = new BitSet(new long[]{0x0000000000000000L,0x0000000100000000L});
-    public static final BitSet FOLLOW_BRACECLOSE_in_importDecl116 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_LIT_in_tag127 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_label134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_packageName33 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PACKAGE_in_packageClause41 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_packageName_in_packageClause43 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_LIT_in_importPath54 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECTOR_in_importSpec63 = new BitSet(new long[]{0x0200000000000000L});
+    public static final BitSet FOLLOW_packageName_in_importSpec67 = new BitSet(new long[]{0x0200000000000000L});
+    public static final BitSet FOLLOW_importPath_in_importSpec70 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_importSpec_in_importSpecList78 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_SEPARATOR_in_importSpecList81 = new BitSet(new long[]{0x0000000100000000L,0x0000004000000000L});
+    public static final BitSet FOLLOW_importSpec_in_importSpecList83 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_SEPARATOR_in_importSpecList87 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IMPORT_in_importDecl95 = new BitSet(new long[]{0x0000000100000000L,0x0000004080000000L});
+    public static final BitSet FOLLOW_importSpec_in_importDecl98 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_BRACEOPEN_in_importDecl103 = new BitSet(new long[]{0x0000000100000000L,0x0000004000000000L});
+    public static final BitSet FOLLOW_importSpecList_in_importDecl105 = new BitSet(new long[]{0x0000000000000000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_BRACECLOSE_in_importDecl107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_LIT_in_tag118 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_label125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_packageName_in_qualifiedIdent142 = new BitSet(new long[]{0x0000000000000000L,0x0000004000000000L});
+    public static final BitSet FOLLOW_SELECTOR_in_qualifiedIdent144 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_ID_in_qualifiedIdent148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_qualifiedIdent_in_typeName157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_typeName_in_type164 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_BRACEOPEN_in_type169 = new BitSet(new long[]{0x0000000100000000L,0x0000000080000000L});
+    public static final BitSet FOLLOW_type_in_type171 = new BitSet(new long[]{0x0000000000000000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_BRACECLOSE_in_type173 = new BitSet(new long[]{0x0000000000000002L});
 
 }
